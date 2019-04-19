@@ -65,7 +65,7 @@ function($scope, $rootScope, $routeParams, $location, Global, Transaction, Trans
       if (items[i].data)
         tmp[addr].data = items[i].data;
 
-      if (tmp[addr].type == 'blind' || tmp[addr].type == 'anon')
+      if (tmp[addr].type == 'spending' || tmp[addr].type == 'spending')
       {
         tmp[addr].valueCommitment = items[i].valueCommitment;
 

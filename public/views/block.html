@@ -37,7 +37,7 @@
   </div>
   <div data-ng-if="block.hash">
     <div class="well well-sm ellipsis">
-      <strong>BlockHash</strong> 
+      <strong>BlockHash</strong>
       <span class="txid text-muted">{{block.hash}}</span>
       <span class="btn-copy" clip-copy="block.hash"></span>
     </div>
@@ -99,7 +99,7 @@
           -->
           <tr>
             <td><strong translate>Block Reward</strong></td>
-            <td data-ng-show="!loading" class="text-right text-muted" id="idBlockReward">{{$root.currency.getConvertion(blockReward) || blockReward + ' BC'}}</td>
+            <td data-ng-show="!loading" class="text-right text-muted" id="idBlockReward">{{$root.currency.getConvertion(blockReward) * -1.0 || blockReward * -1.0 + ' BC'}}</td>
             <td data-ng-show="loading" class="text-right text-muted" translate>Loading</td>
           </tr>
           <tr>
@@ -133,4 +133,3 @@
   </div>
 
 </section>
-

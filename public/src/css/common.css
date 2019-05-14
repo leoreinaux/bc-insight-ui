@@ -106,7 +106,7 @@ margin-left: 0;
   background-color: #F0F7E2;
 }
 .navbar { min-height: 64px; }
-.navbar-default .navbar-toggle { 
+.navbar-default .navbar-toggle {
   border-color: #fff;
   margin-top: 15px;
 }
@@ -115,7 +115,7 @@ margin-left: 0;
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {background-color: #373D42;}
 
 .navbar-default {
-  background-color: #676768;
+  background-color: #232323;
   margin: 0;
   border: 0;
 }
@@ -216,7 +216,7 @@ margin-left: 0;
 .status {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  background-color: #676768;
+  background-color: #232323;
   border-radius: 3px;
   margin: 15px 0;
   padding: 8px 10px;
@@ -316,7 +316,7 @@ margin-left: 0;
   border-radius: 2px;
 }
 .btn-primary {
-  background-color: #676768;
+  background-color: #232323;
   border: 2px solid #76AF0F;
 }
 
@@ -340,7 +340,7 @@ margin-left: 0;
 }
 
 .btn-success {
-  background-color: #2FA4D7;
+  background-color: #727272;
   border: 2px solid #237FA7;
 }
 
@@ -363,17 +363,17 @@ margin-left: 0;
 }
 
 .txvalues-primary {
-  background-color: #676768;
-  color: #000;
+  background-color: #232323;
+  color: #FEC60D;
 }
 
 .txvalues-default {
-  background-color: #EBEBEB;
+  background-color: #232323;
   color: #ffc700;
 }
 
 .txvalues-success {
-  background-color: #2FA4D7;
+  background-color: #727272;
 }
 
 .txvalues-danger {
@@ -387,8 +387,8 @@ margin-left: 0;
   font-size: 14px;
   font-weight: normal;
 }
-.progress-bar-info { background-color: #676768; }
-.progress-bar { color: #000; }
+.progress-bar-info { background-color: #232323; }
+.progress-bar { color: #FEC60D; }
 
 /* Set the fixed height of the footer here */
 #footer {
@@ -571,7 +571,7 @@ margin-left: 0;
   text-align: center;
 }
 
-.tx-id span { 
+.tx-id span {
   font-size: 40px;
   margin: 30px 0;
 }
@@ -719,7 +719,7 @@ a.v_highlight_more {
 @media (max-width: 991px) {
   .status {
     display: none;
-  } 
+  }
   .navbar-form {
     width: auto;
   }
@@ -770,7 +770,7 @@ a.v_highlight_more {
   }
   .status {
     display: none;
-  } 
+  }
   #wrap>.container {
     padding: 50px 15px 0;
   }
@@ -824,11 +824,11 @@ a.v_highlight_more {
   }
   .txvalues-success {
     background: none;
-    color: #2FA4D7;
+    color: #727272;
   }
   .txvalues-primary {
     background: none;
-    color: #676768;
+    color: #232323;
   }
   .txvalues-default {
     background: none;
@@ -855,4 +855,3 @@ a.v_highlight_more {
 .outputdetail {
   margin-bottom:0.4em;
 }
-

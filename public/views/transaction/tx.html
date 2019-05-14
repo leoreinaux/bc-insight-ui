@@ -44,7 +44,7 @@
               <a href="address/{{vin.addr}}" data-ng-show="!vin.notAddr && vin.addr != $root.currentAddr">{{vin.addr}}</a>
             </div>
             <div class="ellipsis" data-ng-show="vin.type == 'spending'">
-              Anonymous, {{vin.num_inputs}}, {{vin.ring_size}}
+              Anonymous
             </div>
             <div data-ng-show="vin.unconfirmedInput" class="text-danger"> <span class="glyphicon glyphicon-warning-sign"></span> (Input unconfirmed)</div>
             <div data-ng-show="vin.dbError" class="text-danger">
@@ -81,7 +81,7 @@
                 <a href="address/{{vin.addr}}" data-ng-show="!vin.notAddr">{{vin.addr}}</a>
               </div>
               <div class="ellipsis" data-ng-show="vin.type == 'spending'">
-                Anonymous, {{vin.num_inputs}}, {{vin.ring_size}}
+                Anonymous
               </div>
               <div data-ng-show="vin.unconfirmedInput" class="text-danger">
                 <span class="glyphicon glyphicon-warning-sign"></span>
@@ -161,7 +161,7 @@
                 <a href="address/{{address}}"  data-ng-show="!vout.notAddr && address != $root.currentAddr" data-ng-repeat="address in vout.addr.split(',')">{{address}}</a>
               </div>
               <div data-ng-show="vout.type == 'spending'" class="ellipsis">
-                <span data-ng-repeat="address in vout.addr.split(',')">{{address}}</span>
+                <span data-ng-repeat="address in vout.addr.split(',')">Anonymous</span>
               </div>
 
             </div>
@@ -203,7 +203,7 @@
                 <a href="address/{{address}}" data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</a>
               </div>
               <div data-ng-show="vout.type == 'spending'" class="ellipsis">
-                <span data-ng-repeat="address in vout.scriptPubKey.addresses">{{address}}</span>
+                <span data-ng-repeat="address in vout.scriptPubKey.addresses">Anonymous</span>
               </div>
             </div>
 
@@ -304,7 +304,7 @@
 <div class="line-top row" data-ng-hide="!tx">
   <div class="col-xs-6 col-sm-4 col-md-4">
     <span data-ng-show="!tx.isCoinBase && !tx.isCoinStake && !isNaN(parseFloat(tx.fees))"
-      class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.fees) || tx.fees + 'BC'}} </span>
+      class="txvalues txvalues-default"><span translate>Fee</span>: {{$root.currency.getConvertion(tx.fees * -1.0) || (tx.fees * -1.0) + 'BC'}} </span>
     <span data-ng-show="tx.isCoinStake &&  !isNaN(parseFloat(tx.fees))"
       class="txvalues txvalues-default"><span translate>Reward</span>: {{$root.currency.getConvertion(tx.fees * -1.0) || (tx.fees * -1.0) + 'BC'}} </span>
   </div>
@@ -312,6 +312,6 @@
     <span data-ng-show="tx.confirmations" class="txvalues
       txvalues-success">{{tx.confirmations}} <span translate>Confirmations</span></span>
     <span data-ng-show="!tx.confirmations" class="txvalues txvalues-danger" translate>Unconfirmed Transaction!</span>
-    <span class="txvalues txvalues-primary">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' BC' }}</span>
+    <span data-ng-show="tx.valueOut > 0" class="txvalues txvalues-primary">{{$root.currency.getConvertion(tx.valueOut) || tx.valueOut + ' BC' }}</span>
   </div>
 </div>
